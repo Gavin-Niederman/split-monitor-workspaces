@@ -14,6 +14,10 @@ stdenv.mkDerivation rec {
 
   buildInputs = [ hyprland ] ++ hyprland.buildInputs;
 
+  patches = [
+    "makefile.patch"
+  ];
+
   buildPhase = ''
     make
   '';
