@@ -1,6 +1,6 @@
 { lib, stdenv, hyprland, pkgs, }:
 stdenv.mkDerivation rec {
-  name = "hyprload-${version}";
+  pname = "hyprload-${version}";
   version = "0.1.0";
   src = ./.;
 
@@ -24,7 +24,7 @@ stdenv.mkDerivation rec {
 
   installPhase = ''
     mkdir -p $out/lib
-    cp split-monitor-workspaces.so $out/lib
+    cp split-monitor-workspaces.so $out/lib/lib${pname}.so
   '';
 
   meta = with lib; {
