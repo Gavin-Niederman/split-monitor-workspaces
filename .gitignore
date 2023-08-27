@@ -1,4 +1,4 @@
 *.so
 compile_flags.txt
 .direnv
-output
+result

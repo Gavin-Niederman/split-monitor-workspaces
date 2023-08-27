@@ -1,5 +1,7 @@
---- Makefile	2023-08-27 12:44:12.532993049 -0700
-+++ Makefile	2023-08-27 12:52:25.504125431 -0700
+diff --git a/Makefile b/Makefile
+index 21b28e7..dfb95b3 100644
+--- a/Makefile
++++ b/Makefile
 @@ -1,7 +1,3 @@
 -# compile with HYPRLAND_HEADERS=<path_to_hl> make all
 -# make sure that the path above is to the root hl repo directory, NOT src/
@@ -8,13 +10,12 @@
  PLUGIN_NAME=split-monitor-workspaces
  
  SOURCE_FILES=$(wildcard src/*.cpp)
-@@ -12,47 +8,12 @@
+@@ -12,47 +8,12 @@ COMPILE_FLAGS+=-Iinclude
  
  COMPILE_DEFINES=-DWLR_USE_UNSTABLE
  
 -INSTALL_LOCATION=${HOME}/.local/share/hyprload/plugins/bin
-+.PHONY: clean
- 
+-
 -ifeq ($(shell whereis -b jq), "jq:")
 -$(error "jq not found. Please install jq.")
 -else
@@ -25,7 +26,8 @@
 -endif
 -
 -.PHONY: clean clangd
--
++.PHONY: clean
+ 
 -all: check_env $(PLUGIN_NAME).so
 -
 -install: all
