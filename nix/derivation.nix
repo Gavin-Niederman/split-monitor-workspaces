@@ -2,7 +2,7 @@
 stdenv.mkDerivation rec {
   pname = "hyprload";
   version = "0.1.0";
-  src = ./.;
+  src = ../.;
 
   nativeBuildInputs = with pkgs; [
     hyprland
@@ -15,7 +15,7 @@ stdenv.mkDerivation rec {
   buildInputs = [ hyprland ] ++ hyprland.buildInputs;
 
   patches = [
-    "makefile.patch"
+    "nix/makefile.patch"
   ];
 
   buildPhase = ''
