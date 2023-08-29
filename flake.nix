@@ -13,7 +13,7 @@
           HYPRLAND_HEADERS = "${hyprland.packages.${system}.hyprland.dev}/include";
         };
         packages = rec {
-          split-monitor-workspaces = import ./default.nix { hyprland = hyprland.packages.${system}.hyprland; pkgs = pkgs; };
+          split-monitor-workspaces = import ./nix/default.nix { hyprland = hyprland.packages.${system}.hyprland; pkgs = pkgs; };
           default = split-monitor-workspaces;
         };
         apps = rec {
