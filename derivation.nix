@@ -1,6 +1,6 @@
 { lib, stdenv, hyprland, pkgs, }:
 stdenv.mkDerivation rec {
-  pname = "hyprload-${version}";
+  pname = "hyprload";
   version = "0.1.0";
   src = ./.;
 
