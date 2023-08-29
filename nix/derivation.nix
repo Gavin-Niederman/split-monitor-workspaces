@@ -1,6 +1,6 @@
 { lib, stdenv, hyprland, pkgs, }:
 stdenv.mkDerivation rec {
-  pname = "hyprload";
+  pname = "split-monitor-workspaces";
   version = "0.1.0";
   src = ../.;
 
